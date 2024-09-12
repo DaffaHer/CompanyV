@@ -379,97 +379,248 @@ body {
 /* Sec 4 Start */
 #expert {
     background: linear-gradient(135deg, #45315c 40%, #3700ff33 80%);
-    padding: 20% 0;
+    padding: 150px 0;
 }
-/* Image */
+
 .c-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 500px; 
-    height: 500px; 
-}
-
-.circle-text {
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    z-index: 10; 
-    text-align: center;
-    width: 100%;
-    height: 100%;
 }
 
-.circle-text h2{
+.circle-text {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.circle-text h2 {
     color: white;
     font-family: 'Roboto', sans-serif; 
     font-size: 2rem;
+    margin-bottom: 50px;
     background: linear-gradient(45deg, #a101a7fd, #1410ff); 
     border-radius: 30px;    
     display: inline-block;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6); 
-    padding: 10px 20px; 
+    padding: 10px 10px; 
 }
 
-.circle-text p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #ffffff;
-    font-size: 1.25rem;
-    background: linear-gradient(45deg, #a101a750, #1410ff63); 
+.circle-text p {
+    background: linear-gradient(45deg, rgba(236, 12, 236, 0.37), rgba(30, 30, 255, 0.247));
     border-radius: 30px;
-    transition: transform 0.5s ease-in-out;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin: auto;
 }
 
-.circle-container > div:not(.circle-text) {
-    position: absolute;
-    width: 150px; 
-    height: 150px;
+.circle-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Jarak antar item */
+}
+
+.circle-item {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.circle-item-laravel {
-    transform: rotate(0deg) translateX(380px) rotate(0deg);
-}
-
-.circle-item-css {
-    transform: rotate(72deg) translateX(330px) rotate(-72deg);
-}
-
-.circle-item-html5 {
-    transform: rotate(144deg) translateX(350px) rotate(-144deg);
-}
-
-.circle-item-reactjs {
-    transform: rotate(216deg) translateX(370px) rotate(-216deg);
-}
-
-.circle-item-js {
-    transform: rotate(288deg) translateX(350px) rotate(-288deg);
-}
-
-.circle-container img {
+.circle-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
-.circle-item-js, .circle-item-css{
-    background-color: white;
+/* Hover effect */
+.circle-item:hover {
+    transform: translateY(-10px); /* Naikkan sedikit gambar */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .circle-container {
+        gap: 15px;
+    }
+
+    .circle-item {
+        width: 100px;
+        height: 100px;
+    }
+
+    .circle-text h2 {
+        font-size: 2rem;
+    }
+
+    .circle-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .circle-container {
+        gap: 10px;
+    }
+
+    .circle-item {
+        width: 80px;
+        height: 80px;
+    }
+
+    .circle-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .circle-text p {
+        font-size: 0.9rem;
+    }
+}
+/* Sec 4 end */
+/* sec 5 */
+#portfolio {
+    background: linear-gradient(135deg, #3700ff33 40%, #45315c 80%);
+    padding: 200px 0;
+}
+
+.porto-text h2{
+    color: white;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 2rem;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #a101a7fd, #1410ff); 
+    border-radius: 30px;    
+    display: inline-block;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6); 
+    padding: 10px 10px; 
+}
+
+.carousel-caption p {
+    background: rgba(128, 128, 128, 0.945);
+    border: 2px solid #808080;
+    border-radius: 5px;
+    margin-bottom: 20%;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    max-width: 90%;
+    margin: 50px;
+    text-align: center;
+}
+
+.portfolio-description p {
+    margin-top : 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    color: #fff; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.img-medium {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+    background-size: 100%, 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.about-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; 
+    border: 5px solid transparent;
+    box-shadow: 0 0 20px #0051ff99;
+    animation: glowing-border 2s infinite; 
+}
+
+
+@keyframes glowing-border {
+    0% {
+        box-shadow: 0 0 5px #c300ff99, 0 0 10px #c300ff66;
+        border-color: #c300ff66;
+    }
+    50% {
+        box-shadow: 0 0 20px #1900ffcc, 0 0 40px #1900ff99;
+        border-color: #1100ff99;
+    }
+    100% {
+        box-shadow: 0 0 5px #007bff99, 0 0 10px #007bff66;
+        border-color: #007bff66;
+    }
+}
+@media (max-width: 768px) {
+    .img-medium {
+        max-width: 80%;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 8%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .img-medium {
+        max-width: 100%;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
 
 footer {
     background-color: #f8f9fa;
